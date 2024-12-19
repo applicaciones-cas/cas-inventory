@@ -59,7 +59,7 @@ public class testInvRequestMPCancel {
         System.out.println("Connected");
         instance = MiscUtil.Connect();
         record = new InvRequestCancel(instance, false);
-        record.setType(RequestControllerFactory.RequestType.MP);
+        record.setType(RequestControllerFactory.RequestType.MPUnits);
         record.setWithUI(false);
         record.setCategoryType(RequestControllerFactory.RequestCategoryType.WITHOUT_ROQ);
         record.setTransactionStatus("01234");

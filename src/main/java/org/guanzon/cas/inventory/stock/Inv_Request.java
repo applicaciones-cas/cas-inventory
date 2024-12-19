@@ -69,6 +69,11 @@ public class Inv_Request implements RequestController  {
     public int getItemCount() {
        return poTrans.getItemCount();
     }
+    
+    @Override
+    public int getOtherItemCount() {
+       return poTrans.getOtherItemCount();
+    }
 
     @Override
     public Model_Inv_Stock_Request_Detail getDetailModel(int fnRow) {
@@ -240,5 +245,9 @@ public class Inv_Request implements RequestController  {
        return poTrans.getDetailModelOthers();
     }
 
+    @Override
+    public JSONObject AddDetailOthers(int fnRow) {
+        return poTrans.AddDetailOthers(fnRow);
+    }
     
 }

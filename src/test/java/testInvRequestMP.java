@@ -65,7 +65,7 @@ public class testInvRequestMP {
         System.out.println("Connected");
         instance = MiscUtil.Connect();
         record = new Inv_Request(instance, false);
-        record.setType(RequestControllerFactory.RequestType.MP);
+        record.setType(RequestControllerFactory.RequestType.MPUnits);
         record.setCategoryType(RequestControllerFactory.RequestCategoryType.WITHOUT_ROQ);
         record.setTransactionStatus("01234");
         record.isHistory(false);

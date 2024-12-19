@@ -681,15 +681,27 @@ public class Inv_Request_Auto implements RequestController {
             lsSQL = lsSQL + " AND (a.nQuantity - (a.nIssueQty + a.nCancelld + a.nOrderQty)) > 0";
             System.out.println(lsSQL);
             ResultSet loRS = poGRider.executeQuery(lsSQL);
-            poModelDetail = new ArrayList<>();
-            while (loRS.next()) {
-                poModelDetail.add(new Model_Inv_Stock_Request_Detail(poGRider));
-                poJSON = poModelDetail.get(poModelDetail.size() - 1).openRecord(loRS.getString("sTransNox"), loRS.getString("sStockIDx"));
-                if ("error".equals((String) poJSON.get("result"))) {
-                    return poJSON;
+            if(category_type == RequestControllerFactory.RequestCategoryType.WITHOUT_ROQ){
+                poModelDetail = new ArrayList<>();
+                while (loRS.next()) {
+                    poModelDetail.add(new Model_Inv_Stock_Request_Detail(poGRider));
+                    poJSON = poModelDetail.get(poModelDetail.size() - 1).openRecord(loRS.getString("sTransNox"), loRS.getString("sStockIDx"));
+                    if ("error".equals((String) poJSON.get("result"))) {
+                        return poJSON;
+                    }
+                }
+            }else{
+                poModelDetailOthers = new ArrayList<>();
+                while (loRS.next()) {
+                    poModelDetailOthers.add(new Model_Inv_Stock_Request_Detail(poGRider));
+                    poJSON = poModelDetailOthers.get(poModelDetailOthers.size() - 1).openRecord(loRS.getString("sTransNox"), loRS.getString("sStockIDx"));
+                    if ("error".equals((String) poJSON.get("result"))) {
+                        return poJSON;
+                    }
                 }
                 
             }
+            
             
 
             return poJSON;
@@ -702,7 +714,6 @@ public class Inv_Request_Auto implements RequestController {
             return poJSON;
         } 
     }
-    
 
     public JSONObject SearchDetailRequest(String fsTransNo, String fsStockID) {
 
@@ -826,36 +837,43 @@ public class Inv_Request_Auto implements RequestController {
 
         return poJSON;
     }
+    
     private JSONObject SaveDetail(){
         poJSON = new JSONObject();
-        // Check if there are items to process
-        if (getItemCount() >= 1) {
-            // Loop in reverse order to avoid index shifting when removing elements
-            for (int lnCtr = getItemCount() - 1; lnCtr >= 0; lnCtr--) {
-                // Check if StockID or Barcode is empty
-                if (poModelDetail.get(lnCtr).getStockID().isEmpty() || poModelDetail.get(lnCtr).getBarcode().isEmpty()) {
-                    // Remove the empty record
-                    poModelDetail.remove(lnCtr);
+            if(category_type == RequestControllerFactory.RequestCategoryType.WITHOUT_ROQ){
+                for (int lnCtr = getItemCount() - 1; lnCtr >= 0; lnCtr--) {
+                    // Check if StockID or Barcode is empty
+                    if (poModelDetail.get(lnCtr).getStockID().isEmpty() || poModelDetail.get(lnCtr).getBarcode().isEmpty()) {
+                        // Remove the empty record
+                        poModelDetail.remove(lnCtr);
+                    }
                 }
-            }
-            // After cleaning, check if any valid items are left
-            if (getItemCount() > 0) {
-                if(category_type == RequestControllerFactory.RequestCategoryType.WITHOUT_ROQ){
+                    
+                if (getItemCount() > 0) {
                     poJSON = saveDetailWithoutROQ();
-                }else{
-                    poJSON = saveDetailWithROQ();
+                } else {
+                    restoreData();
+                    poJSON.put("result", "error");
+                    poJSON.put("message", "Unable to Save empty Transaction.");
+                    return poJSON;
                 }
-            } else {
-                restoreData();
-                poJSON.put("result", "error");
-                poJSON.put("message", "Unable to Save empty Transaction.");
-                return poJSON;
+            }else{
+                for (int lnCtr = getOtherItemCount()- 1; lnCtr >= 0; lnCtr--) {
+            // Check if StockID or Barcode is empty
+                    if (poModelDetailOthers.get(lnCtr).getStockID().isEmpty() || poModelDetailOthers.get(lnCtr).getBarcode().isEmpty()) {
+                        // Remove the empty record
+                        poModelDetailOthers.remove(lnCtr);
+                    }
+                }
+                if (getOtherItemCount() > 0) {
+                    poJSON = saveDetailWithROQ();
+                } else {
+                    restoreROQData();
+                    poJSON.put("result", "error");
+                    poJSON.put("message", "Unable to Save empty Transaction.");
+                    return poJSON;
+                }
             }
-        } else {
-            poJSON.put("result", "error");
-            poJSON.put("message", "Unable to Save empty Transaction.");
-            return poJSON;
-        }
         
         return poJSON;
     }
@@ -890,45 +908,41 @@ public class Inv_Request_Auto implements RequestController {
     }
     private JSONObject saveDetailWithROQ(){
         poJSON = new JSONObject();
-        System.out.print("category_type = " + category_type);
         boolean allZero = true;
-        for (Model_Inv_Stock_Request_Detail items : poModelDetail) {
+        for (Model_Inv_Stock_Request_Detail items : poModelDetailOthers) {
             if (Integer.parseInt(items.getQuantity().toString()) != 0) {
                 allZero = false;  // If any product's quantity is not zero, set flag to false
                 break;  // No need to check further if one non-zero quantity is found
             }
         }
         if (allZero) {
-            restoreData();
             poJSON.put("result", "error");
             poJSON.put("message", "Quantities are currently set to 0. Update them to continue.");
             return poJSON;
         }
-        
-        // Proceed with saving remaining items
         roqSaveCount = 0;
         for (int lnCtr = 0; lnCtr < getItemCount(); lnCtr++) {
-            System.out.println("getItemCount() = " + getItemCount());
-            poModelDetail.get(lnCtr).setEditMode(EditMode.ADDNEW);
-            poModelDetail.get(lnCtr).setEntryNumber(lnCtr + 1);
-            poJSON = poModelDetail.get(lnCtr).saveRecord();
+            poModelDetailOthers.get(lnCtr).setEditMode(EditMode.ADDNEW);
+            int lnQty = Integer.parseInt(poModelDetailOthers.get(lnCtr).getQuantity().toString());
+            if(lnQty>0){
+                
+                poModelDetailOthers.get(lnCtr).setEntryNumber(roqSaveCount + 1);
+                poJSON = poModelDetailOthers.get(lnCtr).saveRecord();
 
 
-            if ("error".equals((String) poJSON.get("result"))) {
-                if (!pbWthParent) {
-                    restoreData();
-                    poGRider.rollbackTrans();
+                if ("error".equals((String) poJSON.get("result"))) {
+                    restoreROQData();
+                    return poJSON;
                 }
-                return poJSON;
+                roqSaveCount++;
             }
-           roqSaveCount++;
-
+            
             poJSON.put("result", "success");
             poJSON.put("message", "Save item record successfuly.");
-        
         }
         return poJSON;
     }
+    
     private JSONObject saveInventoryTrans(){
         poJSON = new JSONObject();
         
@@ -947,7 +961,7 @@ public class Inv_Request_Auto implements RequestController {
         
         return loTrans.BranchOrder(poModelMaster.getTransactionNumber(), poModelMaster.getTransaction(), EditMode.ADDNEW);
     }
-            
+    
     
     /**
      *
@@ -1090,6 +1104,36 @@ public class Inv_Request_Auto implements RequestController {
         }
     
     }
+    
+    private void restoreROQData(){
+        if (!backupRecords.isEmpty()) {
+            if (!pbWthParent) {
+                poGRider.beginTrans();
+            }
+            for(int lnCtr = 0; lnCtr < getItemCount() && lnCtr < backupRecords.size(); lnCtr++){
+                Model_Inv_Stock_Request_Detail model = poModelDetailOthers.get(lnCtr);
+                if(model.getStockID().equalsIgnoreCase(backupRecords.get(lnCtr).getStockID())){
+                    backupRecords.get(lnCtr).setApproved(model.getApproved());
+                }
+            }
+            
+            poModelDetailOthers.clear();  // Clear the current details
+            poModelDetailOthers.addAll(backupRecords);  // Restore from backup
+//            poJSON = SaveDetail();
+            
+            if ("error".equals((String) poJSON.get("result"))) {
+                if (!pbWthParent) {
+                    poGRider.rollbackTrans();
+                }
+            }
+            if (!pbWthParent) {
+                poGRider.commitTrans();
+            }
+            
+        }
+    
+    }
+    
     @Override
     public JSONObject loadAllInventoryMinimumLevel(){
         poJSON = new JSONObject();
@@ -1233,6 +1277,16 @@ public class Inv_Request_Auto implements RequestController {
     @Override
     public ArrayList<Model_Inv_Stock_Request_Detail> getDetailModelOthers() {
         return poModelDetailOthers;
+    }
+
+    @Override
+    public JSONObject AddDetailOthers(int fnRow) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public int getOtherItemCount() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

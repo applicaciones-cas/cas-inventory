@@ -1112,4 +1112,14 @@ public class Inv_Request_SP_Without_ROQ implements RequestController {
     public ArrayList<Model_Inv_Stock_Request_Detail> getDetailModelOthers() {
         return poModelDetailOthers;
     }
+
+    @Override
+    public JSONObject AddDetailOthers(int fnRow) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public int getOtherItemCount() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

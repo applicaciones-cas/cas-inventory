@@ -671,14 +671,18 @@ public class InvRequestCancel implements GTranDet {
         String lsSQL = MiscUtil.addCondition(getSQL_Master(), " a.sTransNox LIKE "
                 + SQLUtil.toSQL(fsValue + "%") + " AND LEFT(a.sTransNox,4) = " + SQLUtil.toSQL(poGRider.getBranchCode()));
         switch (type) {
+            case AUTO:
+                lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0003' AND f.sCategCd2 != '0007'");
             case MC:
                 lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0001' AND f.sCategCd2 != '0007'");
                 break;
-            case MP:
+            case MPUnits:
                 lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0002'");
                 break;
             case SP:
                 lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0001' AND f.sCategCd2 = '0007'");
+            case SP_AUTO:
+                lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0003' AND f.sCategCd2 = '0007'");
                 break;
             case GENERAL:
                 lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0004' AND d.sMainCatx = '0004'");
@@ -713,14 +717,18 @@ public class InvRequestCancel implements GTranDet {
          lsSQL = MiscUtil.addCondition(getSQL_Master(), " a.sTransNox = "
                 + SQLUtil.toSQL(fsValue) + " AND LEFT(a.sTransNox,4) = " + SQLUtil.toSQL(poGRider.getBranchCode()));
         switch (type) {
+            case AUTO:
+                lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0003' AND f.sCategCd2 != '0007'");
             case MC:
                 lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0001' AND f.sCategCd2 != '0007'");
                 break;
-            case MP:
+            case MPUnits:
                 lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0002'");
                 break;
             case SP:
                 lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0001' AND f.sCategCd2 = '0007'");
+            case SP_AUTO:
+                lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0003' AND f.sCategCd2 = '0007'");
                 break;
             case GENERAL:
                 lsSQL = MiscUtil.addCondition(lsSQL, " f.sCategCd1 = '0004' AND d.sMainCatx = '0004'");
@@ -862,8 +870,8 @@ public class InvRequestCancel implements GTranDet {
                 int detailCount = orderGroups.get(orderNumber).size();  // Get the count of details for this order number
                 System.out.println("Order Number: " + orderNumber + " | Count of details: " + detailCount);
 
-//close transaction if cancel detail is equal to request detail count
-//also if all request quantity is serve
+                //close transaction if cancel detail is equal to request detail count
+                //also if all request quantity is serve
                 if (detailCount == poRequest.getItemCount() && allUnservedZero) {
                     poJSON = poRequest.cancelTransaction(orderNumber);
                     if ("error".equals((String) poJSON.get("result"))) {

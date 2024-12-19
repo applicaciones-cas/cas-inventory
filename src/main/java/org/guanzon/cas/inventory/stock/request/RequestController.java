@@ -27,6 +27,12 @@ public interface RequestController extends GTranDet  {
      */
     @Override
     int getItemCount();
+    /**
+     *
+     * @return
+     */
+    
+    int getOtherItemCount();
 
     /**
      *
@@ -261,6 +267,7 @@ public interface RequestController extends GTranDet  {
      * @return
      */
     JSONObject setDetailOthers(int fnRow, int fnCol, Object foData);
+    JSONObject AddDetailOthers(int fnRow);
     
     void isHistory(boolean fbValue);
     

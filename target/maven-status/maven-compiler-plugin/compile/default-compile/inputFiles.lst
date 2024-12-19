@@ -1,66 +1,71 @@
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InventoryTrans.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\cancel\InvRequestCancel.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelPOReceivingDetail.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\cancel\Inv_Request_Cancel.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventoryStockRequestMaster.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvHistLedger.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventorySubUnit.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvMaster.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_SP.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvTransfer.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\approval\Inv_Request_MP_Approval.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_MC.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelCategory2.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\purchase\Inv_Request_MC_Purchase.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\InvStockRequest.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventoryStockRequestCancelDetail.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventoryStockRequestDetail.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvSerialLedger.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_SP_Auto.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\InvStockReqCancel.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelCategory.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\issuance\Inv_Request_Issuance.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvLedger.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvRequestSupplies.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvLedger.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventoryTrans.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\approval\Inv_Request_SP_Approval.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\PO_Quotation.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\purchase\Inv_Request_MP_Purchase.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\approval\Inv_Request_Approval.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelCategory4.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_Auto.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\approval\Inv_Request_General_Approval.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\issuance\Inv_Request_General_Issuance.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_Without_ROQ.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_General.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\purchase\Inv_Request_General_Purchase.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestApprovalController.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_MP.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventoryStockRequestCancelMaster.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\approval\Inv_Request_MC_Approval.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\issuance\Inv_Request_MP_Issuance.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestController.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InventorySubUnit.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\issuance\Inv_Request_MC_Issuance.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\issuance\Inv_Request_SP_Issuance.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvSerial.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\Inventory.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvMaster.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestPurchaseController.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestControllerFactory.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\CasInventory.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\purchase\Inv_Request_Purchase.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvSerial.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestCancelController.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventory.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\purchase\Inv_Request_SP_Purchase.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelCategory3.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InventoryTrans1.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\PO_Quotation_Request.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvHistLedger.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_SP_Without_ROQ.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\constant\InvConstants.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvSerialLedger.java
-D:\Guanzon latest\computerized accounting system\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestIssuanceController.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\Inventory.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvSerialLedger.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvLedger.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\purchase\Inv_Request_Purchase.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\InvStockReqCancel.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\approval\Inv_Request_MP_Approval.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventorySubUnit.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\cancel\Inv_Request_Cancel.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestControllerFactory.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestController.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_SP_Without_ROQ.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_Auto.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelCategory2.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\constant\InvConstants.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventoryTrans.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_Vehicle.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvSerialLedger.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvMaster.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\approval\Inv_Request_MC_Approval.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_MPAccesories.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvSerial.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_SP_Auto.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvTransfer.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InventoryTrans.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_MP.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\purchase\Inv_Request_SP_Purchase.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\PO_Quotation.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvHistLedger.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\issuance\Inv_Request_Issuance.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_SP.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\InvStockRequest.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelCategory3.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestCancelController.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvMaster.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\issuance\Inv_Request_SP_Issuance.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvRequestSupplies.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelCategory4.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_MCSpareparts.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\approval\Inv_Request_Approval.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_Without_ROQ.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\PO_Quotation_Request.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_MC.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestApprovalController.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventory.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_MP1.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvSerial.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_General.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\purchase\Inv_Request_MC_Purchase.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\issuance\Inv_Request_MC_Issuance.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InvLedger.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestPurchaseController.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\cancel\InvRequestCancel.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInvHistLedger.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_Appliances.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\purchase\Inv_Request_General_Purchase.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\issuance\Inv_Request_General_Issuance.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelCategory.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\approval\Inv_Request_General_Approval.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\issuance\Inv_Request_MP_Issuance.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InventoryTrans1.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\approval\Inv_Request_SP_Approval.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\CasInventory.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\Inv_Request_MC1.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventoryStockRequestDetail.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventoryStockRequestCancelMaster.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\purchase\Inv_Request_MP_Purchase.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\base\InventorySubUnit.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventoryStockRequestMaster.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\stock\request\RequestIssuanceController.java
+D:\MAVEN PROJECTS\cas-inventory\src\main\java\org\guanzon\cas\inventory\resultSet2XML\ModelInventoryStockRequestCancelDetail.java
